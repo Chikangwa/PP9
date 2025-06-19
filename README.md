@@ -181,7 +181,7 @@ graph TD
 
 ```mermaid
 ---
-graph TD
+flowchart TD
     A[Start] --> B[Set result = 1]
     B --> C[i = 1 to x loop]
     C --> D{i % 2 == 0?}
@@ -197,7 +197,9 @@ graph TD
     J -- No --> K[Return result]
     K --> L[End]
 
+
 ---
+
 
 ---
 graph TD
