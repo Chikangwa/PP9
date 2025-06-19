@@ -198,7 +198,7 @@ graph TD
 
 
 
-
+```mermaid
 graph TD
     A[Start] --> B[Set state = 0]
     B --> C[i = 0 to len - 1 loop]
@@ -219,6 +219,7 @@ graph TD
     M -- "No" --> O[Return false]
     N --> P[End]
     O --> P
+```
 
 
 **Remember:** Stop after **90 minutes** and record where you stopped.
