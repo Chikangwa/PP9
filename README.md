@@ -203,19 +203,19 @@ graph TD
 graph TD
     A[Start] --> B[Set state = 0]
     B --> C[i = 0 to len - 1 loop]
-    C --> D{arr[i] < 0?}
+    C --> D[arr[i] < 0?]
     D -- Yes --> E[state = -1]
-    D -- No --> F{arr[i] == 0?}
+    D -- No --> F[arr[i] == 0?]
     F -- Yes --> G[state = 0]
     F -- No --> H[state = 1]
-    E --> I{state == 1?}
+    E --> I[state == 1?]
     G --> I
     H --> I
     I -- Yes --> J[Break loop]
     I -- No --> K[Next i]
     K --> C
     J --> L[Switch(state)]
-    L --> M{state == 1?}
+    L --> M[state == 1?]
     M -- Yes --> N[Return true]
     M -- No --> O[Return false]
     N --> P[End]
