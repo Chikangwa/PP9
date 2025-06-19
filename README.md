@@ -212,7 +212,7 @@ graph TD
     I -- Yes --> J[Break loop]
     I -- No --> K[Next i]
     K --> C
-    J --> L[Switch(state)]
+    J --> L[[Switch(state)]]
     L --> M{state == 1?}
     M -- Yes --> N[Return true]
     M -- No --> O[Return false]
