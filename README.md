@@ -116,6 +116,17 @@ gcc -c solutions/flowchart_impl solutions/flowchart_impl.c
 Reflection:
 
 * **Explain how each flowchart node maps to your C code.**
+| Flowchart Step        | C Code Equivalent                       |
+| --------------------- | --------------------------------------- |
+| Start: `x`            | `int x; scanf("%d", &x);` in `main()`   |
+| Initialize result = 1 | `int result = 1;` in `process_number()` |
+| Loop i = 1 to x       | `for (int i = 1; i <= x; i++)`          |
+| `i % 2 == 0` (Even?)  | `if (i % 2 == 0)`                       |
+| Even → result += i    | `result += i;`                          |
+| Odd → result \*= i    | `result *= i;`                          |
+| result > 1000?        | `if (result > 1000)`                    |
+| Yes → result -= 100   | `result -= 100;`                        |
+| Print result          | `printf("Final result: %d\n", result);` |
 
 ---
 
@@ -165,5 +176,46 @@ graph TD
 ```
 
 ---
+
+ transform_complex(int x)
+
+```mermaid
+graph TD
+    A[Start] --> B[Set result = 1]
+    B --> C[i = 1 to x loop]
+    C --> D{i % 2 == 0?}
+    D -- Yes --> E[result += i]
+    D -- No --> F[result *= i]
+    E --> G{result > 1000?}
+    F --> G{result > 1000?}
+    G -- Yes --> H[result -= 100]
+    G -- No --> I[Next i]
+    H --> I
+    I --> J{More i?}
+    J -- Yes --> C
+    J -- No --> K[Return result]
+    K --> L[End]
+
+---
+graph TD
+    A[Start] --> B[Set state = 0]
+    B --> C[i = 0 to len - 1 loop]
+    C --> D{arr[i] < 0?}
+    D -- Yes --> E[state = -1]
+    D -- No --> F{arr[i] == 0?}
+    F -- Yes --> G[state = 0]
+    F -- No --> H[state = 1]
+    E --> I{state == 1?}
+    G --> I
+    H --> I
+    I -- Yes --> J[Break loop]
+    I -- No --> K[Next i]
+    K --> C
+    J --> L[Switch(state)]
+    L --> M{state == 1?}
+    M -- Yes --> N[Return true]
+    M -- No --> O[Return false]
+    N --> P[End]
+    O --> P
 
 **Remember:** Stop after **90 minutes** and record where you stopped.
