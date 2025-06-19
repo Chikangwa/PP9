@@ -177,11 +177,8 @@ graph TD
 
 
 
- transform_complex(int x)
-
 ```mermaid
----
-flowchart TD
+graph TD
     A[Start] --> B[Set result = 1]
     B --> C[i = 1 to x loop]
     C --> D{i % 2 == 0?}
@@ -196,12 +193,13 @@ flowchart TD
     J -- Yes --> C
     J -- No --> K[Return result]
     K --> L[End]
+```
 
 
----
 
 
----
+
+```mermaid
 graph TD
     A[Start] --> B[Set state = 0]
     B --> C[i = 0 to len - 1 loop]
@@ -222,6 +220,6 @@ graph TD
     M -- No --> O[Return false]
     N --> P[End]
     O --> P
----
+```
 
 **Remember:** Stop after **90 minutes** and record where you stopped.
