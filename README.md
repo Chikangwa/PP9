@@ -181,7 +181,7 @@ graph TD
 graph TD
     A[Start] --> B[Set result = 1]
     B --> C[i = 1 to x loop]
-    C --> D{i % 2 == 0?}
+    C --> D[i % 2 == 0?]
     D -- Yes --> E[result += i]
     D -- No --> F[result *= i]
     E --> G{result > 1000?}
