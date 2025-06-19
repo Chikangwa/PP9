@@ -176,7 +176,7 @@ graph TD
 ```
 
 
-
+**Function 1:**
 ```mermaid
 graph TD
     A[Start] --> B[Set result = 1]
@@ -196,7 +196,7 @@ graph TD
 ```
 
 
-
+**Function 2:** 
 ```mermaid
 graph TD
     A[Start] --> B[Set state = 0]
