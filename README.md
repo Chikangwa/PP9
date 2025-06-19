@@ -175,11 +175,12 @@ graph TD
   ...
 ```
 
----
+
 
  transform_complex(int x)
 
 ```mermaid
+---
 graph TD
     A[Start] --> B[Set result = 1]
     B --> C[i = 1 to x loop]
@@ -195,6 +196,8 @@ graph TD
     J -- Yes --> C
     J -- No --> K[Return result]
     K --> L[End]
+
+---
 
 ---
 graph TD
@@ -217,5 +220,6 @@ graph TD
     M -- No --> O[Return false]
     N --> P[End]
     O --> P
+---
 
 **Remember:** Stop after **90 minutes** and record where you stopped.
