@@ -213,7 +213,7 @@ graph TD
     I -- No --> K[Next i]
     K --> C
     J --> L[Switch(state)]
-     L --> M{state == 1?}
+    L --> M{state == 1?}
     M -- Yes --> N[Return true]
     M -- No --> O[Return false]
     N --> P[End]
