@@ -203,7 +203,7 @@ graph TD
     B --> C[i = 0 to len - 1 loop]
     C --> D{Is value < 0?}
     D -- Yes --> E[state = -1]
-    D -- No --> F{arr[i] == 0?}
+   F{Is value equal to 0?}
     F -- Yes --> G[state = 0]
     F -- No --> H[state = 1]
     E --> I{state == 1?}
