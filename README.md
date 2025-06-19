@@ -201,7 +201,7 @@ graph TD
 graph TD
     A[Start] --> B[Set state = 0]
     B --> C[i = 0 to len - 1 loop]
-    C --> D[arr(i) < 0?]
+    C --> D{arr[i] < 0?}
     D -- Yes --> E[state = -1]
     D -- No --> F{arr[i] == 0?}
     F -- Yes --> G[state = 0]
